@@ -2,4 +2,6 @@
 
 .vscode/
 
-NightEdge/**/bin/obj
+NightEdge/**/bin/
+
+NightEdge/**/obj
