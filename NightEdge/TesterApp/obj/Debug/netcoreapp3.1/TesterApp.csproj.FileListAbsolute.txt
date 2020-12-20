@@ -11,3 +11,6 @@ C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Deb
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.dll
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.pdb
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.genruntimeconfig.cache
+C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.dll
+C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.pdb
+C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.csproj.CopyComplete

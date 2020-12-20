@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "NightEdgeFramework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/NightEdgeFramework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NightEdgeFramework.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NightEdgeFramework/1.0.0": {
+      "type": "project",
+      "path": "../NightEdgeFramework/NightEdgeFramework.csproj",
+      "msbuildProject": "../NightEdgeFramework/NightEdgeFramework.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "NightEdgeFramework >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\87239\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\87239\\OneDrive\\Documents\\NightEdgeFramework\\NightEdge\\NightEdgeFramework\\NightEdgeFramework.csproj": {
+              "projectPath": "C:\\Users\\87239\\OneDrive\\Documents\\NightEdgeFramework\\NightEdge\\NightEdgeFramework\\NightEdgeFramework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
