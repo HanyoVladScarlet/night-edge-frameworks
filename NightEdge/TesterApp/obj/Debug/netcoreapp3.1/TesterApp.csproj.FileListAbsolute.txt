@@ -14,3 +14,17 @@ C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Deb
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.dll
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.pdb
 C:\Users\87239\OneDrive\Documents\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.csproj.CopyComplete
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.exe
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.deps.json
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.runtimeconfig.json
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.runtimeconfig.dev.json
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.dll
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\TesterApp.pdb
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.dll
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\bin\Debug\netcoreapp3.1\NightEdgeFramework.pdb
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.csprojAssemblyReference.cache
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.AssemblyInfoInputs.cache
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.AssemblyInfo.cs
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.csproj.CopyComplete
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.dll
+C:\Users\87239\Documents\GitHub\NightEdgeFramework\NightEdge\TesterApp\obj\Debug\netcoreapp3.1\TesterApp.pdb

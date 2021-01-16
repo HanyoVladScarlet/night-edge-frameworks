@@ -2,8 +2,12 @@ using System.Diagnostics;
 using System.Threading;
 using System;
 
-namespace _3rd
+namespace NightEdgeFramework._3rd
 {
+    /// <summary>
+    /// GitHub repository: LukeStampfli/Clock
+    /// This class is used to create a Clock_Ticker.
+    /// </summary>
     public class Clock
     {
             public bool QuitRequested;

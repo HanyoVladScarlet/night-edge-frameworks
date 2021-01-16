@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\StateMachine\" />
+    <Folder Include="Base\StateMachine\" />
     <Folder Include="Input\" />
     <Folder Include="Network\" />
     <Folder Include="User\" />

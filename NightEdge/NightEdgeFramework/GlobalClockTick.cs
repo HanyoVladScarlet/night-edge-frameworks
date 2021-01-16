@@ -7,26 +7,29 @@ namespace NightEdgeFramework
     /// <summary>
     /// 设置一个全局的时钟Ticks
     /// </summary>
-    public class GlobalClock
+    public class GlobalClockTick
     {        
-        private static GlobalClock _globalClock;
+        private static GlobalClockTick _globalClock;
 
-        private _3rd.Clock _timer128;
-        private _3rd.Clock _timer64;
+        private readonly int customFirstClassTicks = 64;
+        private readonly int customSecondClassTicks = 128;
 
-        public List<IGlobalClockerListener> clockerListeners;
+        private readonly _3rd.Clock _timer128;
+        private readonly _3rd.Clock _timer64;
 
-        protected GlobalClock()
+        public List<IGlobalClockListener> clockerListeners;
+
+        protected GlobalClockTick()
         {
-            this._timer128 = new _3rd.Clock(128, false, 0);
-            this._timer64 = new _3rd.Clock(64, false, 0);
-            this._timer128.Tick += _timer_Tick_128;
-            this._timer64.Tick += _timer_Tick_64;
+            this._timer128 = new _3rd.Clock(customSecondClassTicks, false, 0);
+            this._timer64 = new _3rd.Clock(customFirstClassTicks, false, 0);
+            this._timer128.Tick += Timer_Tick_128;
+            this._timer64.Tick += Timer_Tick_64;
 
-            this.clockerListeners = new List<IGlobalClockerListener>();
+            this.clockerListeners = new List<IGlobalClockListener>();
         }
 
-        private void _timer_Tick_64()
+        private void Timer_Tick_64()
         {
             if (_globalClock.clockerListeners != null)
             {
@@ -37,7 +40,7 @@ namespace NightEdgeFramework
             }
         }
 
-        private void _timer_Tick_128()
+        private void Timer_Tick_128()
         {
             if (_globalClock.clockerListeners != null)
             {
@@ -47,20 +50,23 @@ namespace NightEdgeFramework
                 }
             }
         }
-     
-
-       
+ 
         /// <summary>
         /// Singleton
         /// </summary>
         /// <returns>返回一个时钟变量</returns>
-        public static GlobalClock GetGlobalClock()
+        public static GlobalClockTick GetGlobalClockTick()
         {
             if (_globalClock == null)
-                _globalClock = new GlobalClock();
+                _globalClock = new GlobalClockTick();
             return _globalClock;
         }
 
+        public static void AddListener(IGlobalClockListener listener)
+        {
+            _globalClock.clockerListeners.Add(listener);
+        }
 
     }
+
 }

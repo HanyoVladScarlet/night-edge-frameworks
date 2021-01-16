@@ -8,16 +8,16 @@ namespace NightEdgeFramework
     /// Register in GlobalClock when instantiating.
     /// Every registered children of this shall be called per tick.
     /// </summary>
-    public interface IGlobalClockerListener
+    public interface IGlobalClockListener
     {
         /// <summary>
-        /// 一级时钟，每帧调用一次
+        /// First class clock, 64 ticks per sec.
         /// </summary>
         void OnTick();
 
         /// <summary>
-        /// 二级时钟，每帧调用两次
-        /// </summary>
+        /// second class clock, 128 ticks per sec.
+        /// </summary> 
         void OnDoubleTick();
     }
 }
