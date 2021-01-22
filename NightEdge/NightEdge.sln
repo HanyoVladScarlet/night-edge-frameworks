@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesterApp", "TesterApp\TesterApp.csproj", "{5314BE23-C9D1-40E2-A26B-B36B76AA5107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightEdgeFramework", "NightEdgeFramework\NightEdgeFramework.csproj", "{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NightEdgeFramework", "NightEdgeFramework\NightEdgeFramework.csproj", "{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSysTest", "FileSysTest\FileSysTest.csproj", "{28ED98BF-83F6-45E1-A4D7-7D91957C39D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSysTest2", "FileSysTest2\FileSysTest2.csproj", "{08261DE6-6B60-4DD7-B752-D1E207BBDBEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28ED98BF-83F6-45E1-A4D7-7D91957C39D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28ED98BF-83F6-45E1-A4D7-7D91957C39D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28ED98BF-83F6-45E1-A4D7-7D91957C39D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28ED98BF-83F6-45E1-A4D7-7D91957C39D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08261DE6-6B60-4DD7-B752-D1E207BBDBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08261DE6-6B60-4DD7-B752-D1E207BBDBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08261DE6-6B60-4DD7-B752-D1E207BBDBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08261DE6-6B60-4DD7-B752-D1E207BBDBEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

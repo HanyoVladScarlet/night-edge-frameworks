@@ -361,3 +361,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 *.cache
+
+# Built binary files
+*/*/bin/
+*/*/obj/
