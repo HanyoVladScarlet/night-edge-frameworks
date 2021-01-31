@@ -2,13 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+    <RootNamespace>NightEdgeFramework.Core</RootNamespace>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Base\StateMachine\" />
-    <Folder Include="Input\" />
-    <Folder Include="Network\" />
-    <Folder Include="User\" />
+    <Compile Remove="Input\**" />
+    <Compile Remove="User\**" />
+    <EmbeddedResource Remove="Input\**" />
+    <EmbeddedResource Remove="User\**" />
+    <None Remove="Input\**" />
+    <None Remove="User\**" />
   </ItemGroup>
 
 </Project>

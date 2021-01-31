@@ -5,9 +5,9 @@ using System.IO;
 
 namespace NightEdgeFramework.Core
 {
-    public class NefsFileSys
+    public class FileAgent
     {
-        private static NefsFileSys fileSys;
+        private static FileAgent fileAgent;
 
         // 用于临时缓存的文件夹目录
         private string sendBufferDirectory;
@@ -15,19 +15,19 @@ namespace NightEdgeFramework.Core
 
         #region Initialize
 
-        private NefsFileSys()
+        private FileAgent()
         {
 
         }
 
-        public static NefsFileSys GetNefsFileSys()
+        public static FileAgent GetFileAgent()
         {
-            if (fileSys == null)
+            if (fileAgent == null)
             {
-                fileSys = new NefsFileSys();
+                fileAgent = new FileAgent();
             }
 
-            return fileSys;
+            return fileAgent;
         }
 
         #endregion
@@ -110,7 +110,7 @@ namespace NightEdgeFramework.Core
 
                         fsWrite.Write(buffer, 0, len);
 
-                        Console.WriteLine(Encoding.ASCII.GetString(buffer) + len.ToString());
+                        // Console.WriteLine(Encoding.ASCII.GetString(buffer) + len.ToString());
                     }
                     targetLength -= this.UnitSize;
                 };
@@ -130,13 +130,20 @@ namespace NightEdgeFramework.Core
             {
                 if (!Directory.Exists(TargetDirectory))
                     Directory.CreateDirectory(TargetDirectory);
+
+                // File.Create 方法会创建一个文件流 FileStream 对象，在调用 Dispose 方法前目标文件会一直被占用
+                // 这里使用 using 语句释放 FileStream 对象
                 if (!File.Exists(this.TargetPath))
-                    File.Create(this.TargetPath);
+                    using(File.Create(this.TargetPath))                    
+
+                Console.WriteLine("创建目录成功！");
 
                 using (var fsWrite = new FileStream(this.TargetPath, FileMode.Create))
                 {
+                    Console.WriteLine("打开文件成功！");
                     string[] paths = Directory.GetFiles(this.TempFilePath);
                     int start = 0;
+                    int count = 0;
 
                     foreach (var item in paths)
                     {
@@ -145,9 +152,10 @@ namespace NightEdgeFramework.Core
                             fsWrite.Position = start;
                             byte[] buffer = new byte[this.UnitSize];
                             int len = fsReader.Read(buffer, 0, this.UnitSize);
-                            Console.WriteLine(Encoding.ASCII.GetString(buffer));
+                            Console.WriteLine($"done{count}");
                             fsWrite.Write(buffer, 0, len);
                             start += UnitSize;
+                            count++;
                         }                        
                     }
                 }
@@ -159,7 +167,7 @@ namespace NightEdgeFramework.Core
             }
         }
 
-        // 在完成传输后将临时文件施放
+        // 在完成传输后将临时文件释放空间
         public void DisposeTempFiles()
         {
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFramework.Network
 {
-    public class CommandManager
+    public class NefsServer
     {
 
     }

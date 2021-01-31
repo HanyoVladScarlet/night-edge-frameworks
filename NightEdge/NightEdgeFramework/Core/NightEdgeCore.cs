@@ -32,21 +32,31 @@ namespace NightEdgeFramework.Core
 
         #endregion
 
+
+        #region GetMethods
         public NightEdgeCore GetNightEdgeCore()
         {
             return nyx.nec;
         }
 
-        public NefsFileSys GetNefsFileSys()
+        public FileAgent GetNefsFileSys()
         {
-            return nec.GetNefsFileSys();
+            return nec.GetFileAgent();
         }
+
+        public NetworkAgent GetNetworkAgent()
+        {
+            return nec.GetNetworkAgent();
+        }
+        #endregion
+
     }
 
     public class NightEdgeCore
     {
         private static NightEdgeCore core;
-        private NefsFileSys fileSys; 
+        private FileAgent fileSys;
+        private NetworkAgent networkAgent;
 
         private NightEdgeCore()
         {
@@ -62,13 +72,23 @@ namespace NightEdgeFramework.Core
             return core;
         }
 
-        public NefsFileSys GetNefsFileSys()
+        public FileAgent GetFileAgent()
         {
             if (fileSys == null)
             {
-                fileSys = NefsFileSys.GetNefsFileSys();
+                fileSys = FileAgent.GetFileAgent();
             }
             return fileSys;
         }
+
+        public NetworkAgent GetNetworkAgent()
+        {
+            if (networkAgent == null)
+            {
+                networkAgent = NetworkAgent.GetNetworkAgent();
+            }
+            return networkAgent;
+        }
+
     }
 }
