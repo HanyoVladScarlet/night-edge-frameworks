@@ -17,7 +17,9 @@ namespace NightEdgeFramework
         private readonly _3rd.Clock _timer128;
         private readonly _3rd.Clock _timer64;
 
-        public List<IGlobalClockListener> clockerListeners;
+        public event TickEventHandler Tick64;
+        public event TickEventHandler Tick128;
+
 
         protected GlobalClockTick()
         {
@@ -25,30 +27,16 @@ namespace NightEdgeFramework
             this._timer64 = new _3rd.Clock(customFirstClassTicks, false, 0);
             this._timer128.Tick += Timer_Tick_128;
             this._timer64.Tick += Timer_Tick_64;
-
-            this.clockerListeners = new List<IGlobalClockListener>();
         }
 
         private void Timer_Tick_64()
         {
-            if (_globalClock.clockerListeners != null)
-            {
-                foreach (var item in _globalClock.clockerListeners)
-                {
-                    item.OnTick();    // Call all OnTick methods in registered children of IGlobalClockerListener.
-                }
-            }
+            Tick64.Invoke(this);
         }
 
         private void Timer_Tick_128()
         {
-            if (_globalClock.clockerListeners != null)
-            {
-                foreach (var item in _globalClock.clockerListeners)
-                {
-                    item.OnDoubleTick();  // Call all OnDoubleTick methods in registered children of IGlobalClockerListener.
-                }
-            }
+            Tick128.Invoke(this);
         }
  
         /// <summary>
@@ -62,11 +50,7 @@ namespace NightEdgeFramework
             return _globalClock;
         }
 
-        public static void AddListener(IGlobalClockListener listener)
-        {
-            _globalClock.clockerListeners.Add(listener);
-        }
-
     }
 
+    public delegate void TickEventHandler(object sender);
 }

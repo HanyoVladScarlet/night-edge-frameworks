@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NightEdgeFramework.Console;
 
 namespace NightEdgeFramework.Core
 {
@@ -39,7 +40,7 @@ namespace NightEdgeFramework.Core
             return nyx.nec;
         }
 
-        public FileAgent GetNefsFileSys()
+        public FileAgent GetFileAgent()
         {
             return nec.GetFileAgent();
         }
@@ -48,6 +49,11 @@ namespace NightEdgeFramework.Core
         {
             return nec.GetNetworkAgent();
         }
+
+        public NefxConsole GetNefxConsole()
+        {
+            return NefxConsole.GetNefxConsole();
+        }
         #endregion
 
     }
@@ -55,7 +61,7 @@ namespace NightEdgeFramework.Core
     public class NightEdgeCore
     {
         private static NightEdgeCore core;
-        private FileAgent fileSys;
+        private FileAgent fileAgent;
         private NetworkAgent networkAgent;
 
         private NightEdgeCore()
@@ -74,11 +80,11 @@ namespace NightEdgeFramework.Core
 
         public FileAgent GetFileAgent()
         {
-            if (fileSys == null)
+            if (fileAgent == null)
             {
-                fileSys = FileAgent.GetFileAgent();
+                fileAgent = FileAgent.GetFileAgent();
             }
-            return fileSys;
+            return fileAgent;
         }
 
         public NetworkAgent GetNetworkAgent()
@@ -91,4 +97,5 @@ namespace NightEdgeFramework.Core
         }
 
     }
+
 }

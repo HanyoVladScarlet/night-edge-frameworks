@@ -4,20 +4,20 @@ using System.Text;
 
 namespace NightEdgeFramework.Network
 {
-    public class NefsNetSolver
+    public class NefxNetSolver
     {
-        private static NefsNetSolver solver;
+        private static NefxNetSolver solver;
 
-        private NefsNetSolver()
+        private NefxNetSolver()
         {
 
         }
 
-        public static NefsNetSolver GetNefsNetSolver()
+        public static NefxNetSolver GetNefsNetSolver()
         {
             if(solver == null)
             {
-                solver = new NefsNetSolver();
+                solver = new NefxNetSolver();
             }
             return solver;
         }

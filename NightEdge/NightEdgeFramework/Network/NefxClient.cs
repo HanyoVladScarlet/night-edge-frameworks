@@ -6,7 +6,7 @@ using System.Net.Sockets;
 
 namespace NightEdgeFramework.Network
 {
-    public class NefsClient
+    public class NefxClient
     {
         public void Connect()
         {

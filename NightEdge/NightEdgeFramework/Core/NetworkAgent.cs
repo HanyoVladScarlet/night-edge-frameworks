@@ -12,7 +12,7 @@ namespace NightEdgeFramework.Core
     public class NetworkAgent
     {
         private static NetworkAgent networkAgent;
-        private NefsNetSolver solver;
+        private NefxNetSolver solver;
 
         const string REQUEST = "GET /index HTTP/1.1";
 
@@ -24,7 +24,7 @@ namespace NightEdgeFramework.Core
 
         private void Initialize()
         {
-            solver = NefsNetSolver.GetNefsNetSolver();
+            solver = NefxNetSolver.GetNefsNetSolver();
         }
 
         public static NetworkAgent GetNetworkAgent()
@@ -45,14 +45,14 @@ namespace NightEdgeFramework.Core
             IPEndPoint ep = new IPEndPoint(ip, 22);
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             s.Connect(ep);
-            Console.WriteLine(s.RemoteEndPoint);
+            System.Console.WriteLine(s.RemoteEndPoint);
 
             s.Send(Encoding.UTF8.GetBytes(REQUEST));
 
             byte[] buffer = new byte[2 * 1024 * 1024];
 
             s.Receive(buffer, SocketFlags.None);
-            Console.WriteLine(Encoding.UTF8.GetString(buffer));
+            System.Console.WriteLine(Encoding.UTF8.GetString(buffer));
         }
 
         #endregion
@@ -78,14 +78,14 @@ namespace NightEdgeFramework.Core
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ep = new IPEndPoint(IPAddress.Any, 5000);
             s.Bind(ep);
-            Console.WriteLine("监听成功...");
+            System.Console.WriteLine("监听成功...");
             s.Listen(10);
 
 
             Thread thread = new Thread(() =>
             {
                 Socket socketSend = s.Accept();
-                Console.WriteLine(socketSend.RemoteEndPoint.ToString() + ":" + "连接成功！");
+                System.Console.WriteLine(socketSend.RemoteEndPoint.ToString() + ":" + "连接成功！");
 
                 while (true)
                 {
@@ -152,18 +152,18 @@ namespace NightEdgeFramework.Core
             if (!Directory.Exists(targetDirectory))
                 Directory.CreateDirectory(targetDirectory);
 
-            Console.WriteLine("创建目录成功！");
+            System.Console.WriteLine("创建目录成功！");
 
             var fa = FileAgent.GetFileAgent();
             fa.PackFiles(targetName, targetDirectory, tempPath, p_size);
 
-            Console.WriteLine("打包完成");
+            System.Console.WriteLine("打包完成");
 
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse("192.168.1.2"), 5000);
 
             s.Connect(ep);
-            Console.WriteLine("连接成功");
+            System.Console.WriteLine("连接成功");
 
             string[] paths = Directory.GetFiles(tempPath);
 
@@ -177,7 +177,7 @@ namespace NightEdgeFramework.Core
                     byte[] buffer = new byte[p_size];
                     int len = fsReader.Read(buffer, 0, p_size);
                     s.Send(buffer);
-                    Console.WriteLine("发送成功！");
+                    System.Console.WriteLine("发送成功！");
                 }
                 // 接收到信号后完成传送
                 s.Receive(new byte[p_size]);
@@ -192,7 +192,7 @@ namespace NightEdgeFramework.Core
                 }
             }
 
-            Console.ReadKey();
+            System.Console.ReadKey();
             
         }
 

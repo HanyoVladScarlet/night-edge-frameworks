@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NightEdgeFramework.Core;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFramework.Console
 {
-    public class NefsConsole
+    public class NefxConsole
     {
-        private static NefsConsole nefsConsole;
+        private static NefxConsole nefsConsole;
 
         public event ConsoleMessageEventHandler TextToNetEvent;  // 激活向网络发送内容事件
         public event ConsoleMessageEventHandler TextToGuiEvent;  // 激活向用户界面发送内容事件
         public event ConsoleMessageEventHandler TextToComEvent;  // 激活发送命令事件
 
-        public static NefsConsole GetNefsConsole()
+        public static NefxConsole GetNefxConsole()
         {
             if (nefsConsole == null)
-                nefsConsole = new NefsConsole();
+                nefsConsole = new NefxConsole();
             return nefsConsole;
         }
 
@@ -61,7 +62,7 @@ namespace NightEdgeFramework.Core
 
         }
 
-        private NefsConsole()
+        private NefxConsole()
         {
             Initialize();
         }

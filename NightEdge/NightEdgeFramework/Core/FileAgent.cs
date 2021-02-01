@@ -37,13 +37,13 @@ namespace NightEdgeFramework.Core
 
         public void PackFiles(string targetName,string targetPath,string tempFilePath,int per_size)
         {
-            NefsFilePacker packer = new NefsFilePacker { TempFilePath = tempFilePath, TargetDirectory = targetPath, UnitSize = per_size ,TargetName = targetName};
+            NefxFilePacker packer = new NefxFilePacker { TempFilePath = tempFilePath, TargetDirectory = targetPath, UnitSize = per_size ,TargetName = targetName};
             packer.PackUp();
         }
 
         public void UnpackFiles(string targetName,string targetPath, string tempFilePath, int per_size)
         {
-            NefsFilePacker packer = new NefsFilePacker { TempFilePath = tempFilePath, TargetDirectory = targetPath, UnitSize = per_size,TargetName=targetName };
+            NefxFilePacker packer = new NefxFilePacker { TempFilePath = tempFilePath, TargetDirectory = targetPath, UnitSize = per_size,TargetName=targetName };
             packer.Unpack();
         }
 
@@ -82,7 +82,7 @@ namespace NightEdgeFramework.Core
 
     }
 
-    public class NefsFilePacker
+    public class NefxFilePacker
     {
         public string TempFilePath { get; set; }
         public string TargetDirectory { get; set; }
@@ -134,13 +134,13 @@ namespace NightEdgeFramework.Core
                 // File.Create 方法会创建一个文件流 FileStream 对象，在调用 Dispose 方法前目标文件会一直被占用
                 // 这里使用 using 语句释放 FileStream 对象
                 if (!File.Exists(this.TargetPath))
-                    using(File.Create(this.TargetPath))                    
+                    using(File.Create(this.TargetPath))
 
-                Console.WriteLine("创建目录成功！");
+                        System.Console.WriteLine("创建目录成功！");
 
                 using (var fsWrite = new FileStream(this.TargetPath, FileMode.Create))
                 {
-                    Console.WriteLine("打开文件成功！");
+                    System.Console.WriteLine("打开文件成功！");
                     string[] paths = Directory.GetFiles(this.TempFilePath);
                     int start = 0;
                     int count = 0;
@@ -152,7 +152,7 @@ namespace NightEdgeFramework.Core
                             fsWrite.Position = start;
                             byte[] buffer = new byte[this.UnitSize];
                             int len = fsReader.Read(buffer, 0, this.UnitSize);
-                            Console.WriteLine($"done{count}");
+                            System.Console.WriteLine($"done{count}");
                             fsWrite.Write(buffer, 0, len);
                             start += UnitSize;
                             count++;

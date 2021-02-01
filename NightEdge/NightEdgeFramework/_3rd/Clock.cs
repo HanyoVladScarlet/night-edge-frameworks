@@ -66,7 +66,7 @@ namespace NightEdgeFramework._3rd
                         if (count % LogRate == 0)
                         {
                             count = 0;
-                            Console.WriteLine("*-----------------------*\n"+timer.Elapsed.TotalMilliseconds.ToString("0.000") + " => Logging performance\n\t"+ totalFrameTime.ToString("0.000") + " => Cumultative delta times since last log\n\t" + maxFrameTime.ToString("0.000") + " => Max delta time since last log"+ "\n*-----------------------*");
+                        System.Console.WriteLine("*-----------------------*\n"+ timer.Elapsed.TotalMilliseconds.ToString("0.000") + " => Logging performance\n\t"+ totalFrameTime.ToString("0.000") + " => Cumultative delta times since last log\n\t" + maxFrameTime.ToString("0.000") + " => Max delta time since last log"+ "\n*-----------------------*");
                             totalFrameTime = 0;
                             maxFrameTime = 0;
                         }

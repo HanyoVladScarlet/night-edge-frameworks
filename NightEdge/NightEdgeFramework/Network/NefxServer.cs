@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NightEdgeFramework.Network
 {
-    public class NefsServer
+    public class NefxServer
     {
 
     }
