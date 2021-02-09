@@ -2,7 +2,7 @@
 using System.Timers;
 using System.Collections.Generic;
 
-namespace NightEdgeFramework
+namespace NightEdgeFrameworks.Clock
 {
     /// <summary>
     /// 设置一个全局的时钟Ticks
@@ -31,12 +31,14 @@ namespace NightEdgeFramework
 
         private void Timer_Tick_64()
         {
-            Tick64.Invoke(this);
+            if(Tick64!=null)
+                Tick64.Invoke(this);
         }
 
         private void Timer_Tick_128()
         {
-            Tick128.Invoke(this);
+            if(Tick128!=null)
+                Tick128.Invoke(this);
         }
  
         /// <summary>

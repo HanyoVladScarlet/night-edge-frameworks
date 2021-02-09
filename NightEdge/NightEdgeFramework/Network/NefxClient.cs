@@ -4,7 +4,7 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 
-namespace NightEdgeFramework.Network
+namespace NightEdgeFrameworks.Network
 {
     public class NefxClient
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFramework.Command
+namespace NightEdgeFrameworks.Command
 {
-    class NefxComStash
+    class NefxComQueue
     {
-        private static NefxComStash ncs;
+        private static NefxComQueue ncs;
         /// <summary>
         /// 这个字典用作命令和相关函数名的映射，通过读取一个json文件或是dll文件获得
         /// </summary>
@@ -15,17 +15,17 @@ namespace NightEdgeFramework.Command
 
         #region Initialize
 
-        private NefxComStash()
+        private NefxComQueue()
         {
 
         }
 
         #endregion
 
-        public static NefxComStash GetComStash()
+        public static NefxComQueue GetComStash()
         {
             if (ncs == null)
-                ncs = new NefxComStash();
+                ncs = new NefxComQueue();
             return ncs;
         }
     }

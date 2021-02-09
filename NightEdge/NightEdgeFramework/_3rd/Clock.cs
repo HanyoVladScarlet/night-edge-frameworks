@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Threading;
 using System;
 
-namespace NightEdgeFramework._3rd
+namespace NightEdgeFrameworks._3rd
 {
     /// <summary>
     /// GitHub repository: LukeStampfli/Clock

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFrameworks.Network
+namespace NightEdgeFrameworks
 {
-    public class NefxServer
+    public class GameAgent
     {
 
     }

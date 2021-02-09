@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NightEdgeFramework.Console;
+using NightEdgeFrameworks.Clock;
+using NightEdgeFrameworks.Debug;
+using NightEdgeFrameworks.Network;
+using NightEdgeFrameworks.FileLib;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFrameworks
 {
     public class Nyx
     {
@@ -56,6 +59,10 @@ namespace NightEdgeFramework.Core
         }
         #endregion
 
+        public void Think(Action action, int time)
+        {
+            Thinker.Think(action, time);
+        }
     }
 
     public class NightEdgeCore
@@ -63,10 +70,11 @@ namespace NightEdgeFramework.Core
         private static NightEdgeCore core;
         private FileAgent fileAgent;
         private NetworkAgent networkAgent;
+        private GlobalClockTick tick;
 
         private NightEdgeCore()
         {
-
+            tick = GlobalClockTick.GetGlobalClockTick();
         }
 
         public static NightEdgeCore GetNightEdgeCore()

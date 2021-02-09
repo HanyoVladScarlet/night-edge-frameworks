@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFrameworks.MathLib
 {
-    public class GameAgent
+    public class NefxEquation
     {
     }
 }

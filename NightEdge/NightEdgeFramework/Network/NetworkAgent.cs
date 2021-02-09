@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using NightEdgeFramework.Network;
 using System.IO;
 using System.Threading;
+using NightEdgeFrameworks.FileLib;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFrameworks.Network
 {
     public class NetworkAgent
     {
@@ -24,7 +24,7 @@ namespace NightEdgeFramework.Core
 
         private void Initialize()
         {
-            solver = NefxNetSolver.GetNefsNetSolver();
+            this.solver = NefxNetSolver.GetNefsNetSolver();
         }
 
         public static NetworkAgent GetNetworkAgent()

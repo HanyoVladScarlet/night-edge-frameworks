@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
-using NightEdgeFramework.Command;
+using NightEdgeFrameworks.Clock;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFrameworks.Command
 {
     public class CommandAgent
     {
         private static CommandAgent ca;
-        private NefxComStash ncs;
+        private NefxComQueue ncs;
         private GlobalClockTick gct;
 
         #region Initialize
 
         private void Initialize()
         {
-            ncs = NefxComStash.GetComStash();
+            ncs = NefxComQueue.GetComStash();
             gct = GlobalClockTick.GetGlobalClockTick();
             gct.Tick64 += OnTick64;
         }

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using NightEdgeFrameworks;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFrameworks.FileLib
 {
     public class FileAgent
     {
@@ -82,7 +83,7 @@ namespace NightEdgeFramework.Core
 
     }
 
-    public class NefxFilePacker
+    internal class NefxFilePacker
     {
         public string TempFilePath { get; set; }
         public string TargetDirectory { get; set; }

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using System.Threading;
-using NightEdgeFramework;
-using NightEdgeFramework._3rd;
+using NightEdgeFrameworks;
+using NightEdgeFrameworks._3rd;
 
 namespace TesterApp.TestGameMode
 {

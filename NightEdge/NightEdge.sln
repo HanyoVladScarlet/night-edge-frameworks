@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesterApp", "TesterApp\TesterApp.csproj", "{5314BE23-C9D1-40E2-A26B-B36B76AA5107}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NightEdgeFramework", "NightEdgeFramework\NightEdgeFramework.csproj", "{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NightEdgeFrameworks", "NightEdgeFramework\NightEdgeFrameworks.csproj", "{08DD0153-A7E0-44BB-8BAE-BE1B86459A91}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClient", "TestClient\TestClient.csproj", "{C6F3BD2B-8302-40D3-9F8C-94725A58EBF9}"
 EndProject

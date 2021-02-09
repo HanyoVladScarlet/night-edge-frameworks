@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFramework.Network
+namespace NightEdgeFrameworks.Network
 {
     public class NefxNetSolver
     {

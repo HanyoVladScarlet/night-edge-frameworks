@@ -13,11 +13,8 @@
 
   <ItemGroup>
     <Compile Remove="Input\**" />
-    <Compile Remove="User\**" />
     <EmbeddedResource Remove="Input\**" />
-    <EmbeddedResource Remove="User\**" />
     <None Remove="Input\**" />
-    <None Remove="User\**" />
   </ItemGroup>
 
 </Project>

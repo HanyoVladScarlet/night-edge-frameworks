@@ -1,5 +1,5 @@
 ﻿using System;
-using NightEdgeFramework.Core;
+using NightEdgeFrameworks.Core;
 
 namespace TestClient
 {

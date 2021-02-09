@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NightEdgeFramework.Core
+namespace NightEdgeFramework.MathLib
 {
-    public class NefsLogger
+    public class NefxQuaternion
     {
 
     }
