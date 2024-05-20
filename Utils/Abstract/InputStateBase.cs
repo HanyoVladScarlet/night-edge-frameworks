@@ -1,0 +1,1 @@
+﻿namespace NightEdgeFrameworks.Utils.Abstract { public abstract class InputStateBase : EntityStateBase { } }
